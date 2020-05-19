@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileSdkVersion rootProject.compileSdkVersion
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    defaultConfig {
+        applicationId "com.nzy.mvvmsimple"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "androidx.core:core-ktx:$rootProject.ktxVersion"
+
+//    在Fragment中使用懒加载模式得到ViewModel
+//    val viewmode : MyViewModel by viewModels{
+//        ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
+//    }
+    implementation "androidx.fragment:fragment-ktx:$rootProject.fragmentVersion"
+
+//    在activity中使用懒加载模式得到ViewModel，只能用val修饰
+//    val viewmode : MyViewModel by viewModels{
+//        ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+//    }
+    implementation "androidx.activity:activity-ktx:1.1.0"
+
+    // ViewModel and LiveData 不包含在ViewModel和LiveData中使用协程
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
+
+//     LiveData 使用协程
+//    val user: LiveData<User> = liveData {
+//        val data = getNetData() // loadUser is a suspend function.
+//        emit(data) //发射给出去
+//    }
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$rootProject.lifecycleVersion"
+
+
+//    ViewModel 中使用协程
+//    viewModelScope.launch {
+//
+//    }
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$rootProject.lifecycleVersion"
+
+//     Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$rootProject.lifecycleVersion"
+
+
+//    在Activity中使用协程
+//    lifecycleScope.launch {
+//
+//    }
+//    或者在Fragment中使用协程
+//    viewLifecycleOwner.lifecycleScope.launch {
+//    }
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycleVersion"
+
+//    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
+//    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+//    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+//    implementation "androidx.viewpager2:viewpager2:$rootProject.viewPagerVersion"
+//    implementation "androidx.work:work-runtime-ktx:$rootProject.workVersion"
+//    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+//    implementation "com.google.android.material:material:$rootProject.materialVersion"
+//    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+
+
+}
