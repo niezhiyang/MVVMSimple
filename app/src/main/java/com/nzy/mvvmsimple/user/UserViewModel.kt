@@ -7,8 +7,6 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
 /**
- *  @author niezhiyang
- *  since 2020/5/18
  *  用户的ViewModel
  */
 class UserViewModel(private val repository: UserRepository) : ViewModel() {

@@ -4,8 +4,6 @@ import com.nzy.mvvmsimple.user.UserRepository
 import com.nzy.mvvmsimple.user.UserViewModelFactory
 
 /**
- *  @author niezhiyang
- *  since 2020/5/18
  *  得到各种各样的Repository工具类
  */
 object InjectorUtils {
