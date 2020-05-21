@@ -28,6 +28,7 @@ class UserViewModelFactory(
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        // 传入一个 Repository 参数
         return UserViewModel(repository) as T
     }
 }
