@@ -23,7 +23,7 @@ class UserActivity : AppCompatActivity() {
 
 
     private val viewModel: UserViewModel by viewModels {
-        // 通过InjectorUtils类拿到对应的ViewModelFactory
+        // 通过InjectorUtils类拿到对应的ViewModelFactory，这种方法可以定义构造方法带参的ViewModel
         InjectorUtils.provideUserViewModelFactory()
     }
     private var progressDialog: ProgressDialog? = null
