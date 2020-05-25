@@ -88,6 +88,9 @@ dependencies {
 //    }
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$rootProject.lifecycleVersion"
 
+
+    implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:$rootProject.lifecycleVersion"
+
 //    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
 //    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
 //    implementation "androidx.room:room-ktx:$rootProject.roomVersion"

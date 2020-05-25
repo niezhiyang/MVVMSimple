@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.fragment_share_one.*
 import kotlinx.android.synthetic.main.fragment_share_two.*
 
 class ShareOneFragment : Fragment() {
+    // 创建以Activity为维度的ViewModel，注意 这里是 requireActivity() 不是 getActivity(),requireActivity()不可能为空，getActivity()有可能为空
     private val viewModel: DemoViewModel
             by lazy { ViewModelProvider(requireActivity()).get(DemoViewModel::class.java) }
 
@@ -30,6 +31,7 @@ class ShareOneFragment : Fragment() {
             tv_name_one.text = it
         })
 
+        // 在 FragmentOne 中去改变值
         tv_one.setOnClickListener {
             viewModel.dataLive.value = "Fragment-One，改变的值"
         }
@@ -37,7 +39,7 @@ class ShareOneFragment : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance() =
             ShareOneFragment()
     }
 }

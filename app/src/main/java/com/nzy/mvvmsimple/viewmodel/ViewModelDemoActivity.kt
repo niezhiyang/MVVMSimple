@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_viewmodel_demo.*
  *  since 2020/5/23
  */
 class ViewModelDemoActivity : AppCompatActivity() {
+    // 创建以Activity为维度的ViewModel
     private val viewModel: DemoViewModel by lazy { ViewModelProvider(this).get(DemoViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,6 +40,7 @@ class ViewModelDemoActivity : AppCompatActivity() {
         })
 
         tv_name.setOnClickListener{
+            // activity 里面的点击去改变值
             viewModel.dataLive.value= "Activity触发的改变"
         }
         viewModel.getName()
