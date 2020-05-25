@@ -8,6 +8,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.nzy.mvvmsimple.R
 import com.nzy.mvvmsimple.databinding.ActivityUserBinding
 import com.nzy.mvvmsimple.injector.InjectorUtils
@@ -19,7 +20,7 @@ class UserActivity : AppCompatActivity() {
     //创建ViewModel方式1
 //   private val viewModel: UserViewModel by viewModels()
     //创建ViewModel方式2
-//    private val viewModel:UserViewModel by lazy { ViewModelProvider(this).get(UserViewModel::class.java) }
+    private val viewModel2:UserViewModel by lazy { ViewModelProvider(this).get(UserViewModel::class.java) }
 
 
     private val viewModel: UserViewModel by viewModels {
@@ -69,4 +70,7 @@ class UserActivity : AppCompatActivity() {
             activity.startActivity(Intent(activity, UserActivity::class.java))
         }
     }
+
+
+
 }

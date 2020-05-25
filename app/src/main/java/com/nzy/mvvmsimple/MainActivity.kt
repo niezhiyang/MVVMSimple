@@ -10,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import com.nzy.mvvmsimple.databinding.ActivityMainBinding
 import com.nzy.mvvmsimple.injector.InjectorUtils
 import com.nzy.mvvmsimple.user.UserActivity
+import com.nzy.mvvmsimple.viewmodel.ViewModelDemoActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.launch
 
@@ -23,8 +24,11 @@ class MainActivity : AppCompatActivity() {
         var binding =
             DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         bt_simple.setOnClickListener {
-
             UserActivity.startMe(this)
+        }
+
+        bt_viewmodel_simple.setOnClickListener {
+            ViewModelDemoActivity.startMe(this)
         }
     }
 }

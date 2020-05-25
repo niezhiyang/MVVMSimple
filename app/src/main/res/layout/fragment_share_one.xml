@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECB4B4"
+    tools:context=".viewmodel.ShareOneFragment">
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Fragment-one" />
+    <TextView
+        android:textColor="#FFFFFF"
+        android:id="@+id/tv_name_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:textSize="30sp" />
+</FrameLayout>

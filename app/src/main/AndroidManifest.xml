@@ -18,6 +18,7 @@
         </activity>
 
         <activity android:name=".user.UserActivity"/>
+        <activity android:name=".viewmodel.ViewModelDemoActivity"/>
     </application>
 
 </manifest>
