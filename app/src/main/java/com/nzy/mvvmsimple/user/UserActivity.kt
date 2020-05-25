@@ -35,7 +35,7 @@ class UserActivity : AppCompatActivity() {
 
         var binding =
             DataBindingUtil.setContentView<ActivityUserBinding>(this, R.layout.activity_user)
-        //绑定生命周期
+        //绑定生命周期，声明这个 Activity 为 Data Binding 的 lifecycleOwner
         binding.lifecycleOwner = this
         //设置xml中的viewModel
         binding.viewmodel = viewModel

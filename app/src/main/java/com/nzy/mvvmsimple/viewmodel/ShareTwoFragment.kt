@@ -28,6 +28,7 @@ class ShareTwoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        // 这里传入是 viewLifecycleOwner（getViewLifecycleOwner()）,而不会Fragment本身
         viewModel.dataLive.observe(viewLifecycleOwner, Observer {
             tv_name_two.text = it
 
