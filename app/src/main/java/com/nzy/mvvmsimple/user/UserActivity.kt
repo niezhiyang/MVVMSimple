@@ -3,6 +3,7 @@ package com.nzy.mvvmsimple.user
 import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -20,7 +21,7 @@ class UserActivity : AppCompatActivity() {
     //创建ViewModel方式1
 //   private val viewModel: UserViewModel by viewModels()
     //创建ViewModel方式2
-    private val viewModel2:UserViewModel by lazy { ViewModelProvider(this).get(UserViewModel::class.java) }
+//    private val viewModel:UserViewModel by lazy { ViewModelProvider(this,InjectorUtils.provideUserViewModelFactory()).get(UserViewModel::class.java) }
 
 
     private val viewModel: UserViewModel by viewModels {
