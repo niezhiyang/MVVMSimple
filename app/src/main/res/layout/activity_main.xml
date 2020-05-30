@@ -29,10 +29,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="MVVM简单实现页面"
+            android:text="ViewModel页面"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_simple" />
+        <Button
+            android:id="@+id/bt_lifeOwner_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="lifeOwner页面"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_viewmodel_simple" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

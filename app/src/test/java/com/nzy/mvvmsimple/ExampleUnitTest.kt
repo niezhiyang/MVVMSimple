@@ -1,5 +1,9 @@
 package com.nzy.mvvmsimple
 
+import com.nzy.mvvmsimple.observesimple.Observable
+import com.nzy.mvvmsimple.observesimple.ObservableImpl
+import com.nzy.mvvmsimple.observesimple.Observe
+import com.nzy.mvvmsimple.observesimple.ObserveImpl
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -12,6 +16,23 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+        var observable: Observable = ObservableImpl()
+
+        var observeZhang: Observe = ObserveImpl("张三")
+        var observeLi: Observe = ObserveImpl("李四")
+        var observeWang: Observe = ObserveImpl("王五")
+
+        observable.addObserver(observeZhang)
+        observable.addObserver(observeLi)
+        observable.addObserver(observeWang)
+
+        observable.notifyObserve()
+
+        observable.removeObserver(observeZhang)
+
+
+        observable.notifyObserve()
+
+
     }
 }
