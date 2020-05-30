@@ -15,7 +15,7 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
+    fun testObserve() {
         var observable: Observable = ObservableImpl()
 
         var observeZhang: Observe = ObserveImpl("张三")
@@ -29,6 +29,10 @@ class ExampleUnitTest {
         observable.notifyObserve()
 
         observable.removeObserver(observeZhang)
+
+        println("")
+        println("---去除张三----")
+        println("")
 
 
         observable.notifyObserve()

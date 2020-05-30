@@ -7,6 +7,7 @@ package com.nzy.mvvmsimple.observesimple
 class ObservableImpl : Observable {
 
     private val arrayList = ArrayList<Observe>()
+
     override fun addObserver(observe: Observe) {
         if (!arrayList.contains(observe)) {
             arrayList.add(observe)
