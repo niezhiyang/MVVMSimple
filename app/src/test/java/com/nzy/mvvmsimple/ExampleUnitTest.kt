@@ -16,26 +16,37 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun testObserve() {
-        var observable: Observable = ObservableImpl()
+//        var observable: Observable = ObservableImpl()
+//
+//        var observeZhang: Observe = ObserveImpl("张三")
+//        var observeLi: Observe = ObserveImpl("李四")
+//        var observeWang: Observe = ObserveImpl("王五")
+//
+//        observable.addObserver(observeZhang)
+//        observable.addObserver(observeLi)
+//        observable.addObserver(observeWang)
+//
+//        observable.notifyObserve()
+//
+//        observable.removeObserver(observeZhang)
+//
+//        println("")
+//        println("---去除张三----")
+//        println("")
+//
+//
+//        observable.notifyObserve()
+//
 
-        var observeZhang: Observe = ObserveImpl("张三")
-        var observeLi: Observe = ObserveImpl("李四")
-        var observeWang: Observe = ObserveImpl("王五")
+        var a:Int = 127
+        var b:Int = 127
 
-        observable.addObserver(observeZhang)
-        observable.addObserver(observeLi)
-        observable.addObserver(observeWang)
+        print(a==b)
 
-        observable.notifyObserve()
+        var a1:Int = 128
+        var b2:Int = 128
 
-        observable.removeObserver(observeZhang)
-
-        println("")
-        println("---去除张三----")
-        println("")
-
-
-        observable.notifyObserve()
+        print(a1==b2)
 
 
     }

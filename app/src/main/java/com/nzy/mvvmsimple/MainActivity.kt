@@ -1,19 +1,15 @@
 package com.nzy.mvvmsimple
 
 import android.app.ProgressDialog
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
-import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import com.nzy.mvvmsimple.databinding.ActivityMainBinding
-import com.nzy.mvvmsimple.injector.InjectorUtils
 import com.nzy.mvvmsimple.lifecycleowner.LifeDemoActivity
 import com.nzy.mvvmsimple.user.UserActivity
 import com.nzy.mvvmsimple.viewmodel.ViewModelDemoActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private var progressDialog: ProgressDialog? = null
@@ -33,5 +29,7 @@ class MainActivity : AppCompatActivity() {
         bt_lifeOwner_simple.setOnClickListener {
             LifeDemoActivity.startMe(this)
         }
+//        val uri: Uri = Uri.parse("content://com.example.ticker.bookprovider.BooksProvider")
+//        contentResolver.query(uri, null, null, null, null)
     }
 }
