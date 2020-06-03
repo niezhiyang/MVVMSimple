@@ -15,38 +15,58 @@ import com.nzy.mvvmsimple.lifecycleowner.LifeDemoActivity
  *  @author niezhiyang
  *  since 2020/5/28
  */
-class MyApplication:Application() {
+class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationObserver())
+//        ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationObserver())
 
-        registerActivityLifecycleCallbacks(object :ActivityLifecycleCallbacks{
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
             override fun onActivityPaused(activity: Activity?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivityPaused")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivityPaused")
+                }
             }
 
             override fun onActivityResumed(activity: Activity?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivityResumed")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivityResumed")
+                }
+
             }
 
             override fun onActivityStarted(activity: Activity?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivityStarted")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivityStarted")
+                }
+
             }
 
             override fun onActivityDestroyed(activity: Activity?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivityDestroyed")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivityDestroyed")
+                }
+
             }
 
             override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivitySaveInstanceState")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivitySaveInstanceState")
+                }
+
             }
 
             override fun onActivityStopped(activity: Activity?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivityStopped")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivityStopped")
+                }
+
             }
 
             override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
-                Log.e(LifeDemoActivity.TAG,"Application --onActivityCreated")
+                if (activity is LifeDemoActivity) {
+                    Log.e(LifeDemoActivity.TAG, "Application --onActivityCreated")
+                }
+
             }
 
         });
