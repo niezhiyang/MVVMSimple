@@ -3,6 +3,8 @@ package com.nzy.mvvmsimple.livedatademo
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -31,12 +33,20 @@ class LiveDataActivity : AppCompatActivity() {
         viewModel.timeMutableLiveData.observe(this, Observer {
             tv_time.text = "${it}秒"
         })
+//        viewModel.timeMutableLiveData.observeForever {
+//            Toast.makeText(this, "$it", Toast.LENGTH_SHORT).show()
+//        }
+
 
     }
 
+
     companion object {
+        val TAG = "LiveDataActivity"
         fun startMe(activity: Activity) {
             activity.startActivity(Intent(activity, LiveDataActivity::class.java))
         }
     }
+
+
 }

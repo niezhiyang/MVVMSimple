@@ -12,14 +12,16 @@ import kotlinx.coroutines.launch
  *  @author niezhiyang
  *  since 2020/6/3
  */
-class TimeViewModel:ViewModel() {
+class TimeViewModel : ViewModel() {
     var time = 0
-     val timeMutableLiveData: MutableLiveData<Int> =
-        MutableLiveData<Int>()
-    init {
+    val timeMutableLiveData: MutableLiveData<Int> by lazy {
+        time = 0
         getTime()
+        MutableLiveData<Int>()
     }
-    private fun getTime(){
+
+
+    private fun getTime() {
         viewModelScope.launch {
             delay(1000)
             timeMutableLiveData.value = ++time

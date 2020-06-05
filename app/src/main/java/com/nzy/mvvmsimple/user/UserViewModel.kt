@@ -10,8 +10,8 @@ import kotlinx.coroutines.launch
  *  用户的ViewModel
  */
 class UserViewModel(private val repository: UserRepository) : ViewModel() {
-    var userData = MutableLiveData<User>()
-    var progressShow = MutableLiveData<Boolean>()
+    val userData :MutableLiveData<User> by lazy { MutableLiveData<User>() }
+    val progressShow:MutableLiveData<Boolean> by lazy { MutableLiveData<Boolean>() }
 
     fun click(view: View) {
         getUser()

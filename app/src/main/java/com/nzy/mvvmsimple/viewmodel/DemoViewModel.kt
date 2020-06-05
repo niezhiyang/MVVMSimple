@@ -10,8 +10,10 @@ import kotlinx.coroutines.launch
  *  since 2020/5/23
  */
 class DemoViewModel : ViewModel() {
-     val dataLive: MutableLiveData<String> =
+     val dataLive: MutableLiveData<String> by lazy {
          MutableLiveData<String>()
+     }
+
 
 
     fun getName(){
