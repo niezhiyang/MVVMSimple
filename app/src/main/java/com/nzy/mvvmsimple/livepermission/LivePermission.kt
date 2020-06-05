@@ -36,7 +36,6 @@ class LivePermission {
         }
 
 //        if (fragmentManager!!.findFragmentByTag(TAG)==null) {
-            Log.e(TAG,"${permissionFragment.isAdded}+${permissionFragment.isInLayout}+${permissionFragment.isVisible}")
             fragmentManager?.beginTransaction()?.add(permissionFragment, TAG)?.commitNow()
 //        }
         permissionFragment.request(liveData, permission)
