@@ -21,8 +21,7 @@ class PermissionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_permission)
         bt_requst.setOnClickListener {
 
-
-            LivePermission(this).request(Manifest.permission.READ_EXTERNAL_STORAGE).observe(this,
+            LivePermission(this).request(Manifest.permission.WRITE_EXTERNAL_STORAGE).observe(this,
                 Observer {
                     Toast.makeText(this@PermissionActivity, "$it", Toast.LENGTH_SHORT).show()
                 })
@@ -33,7 +32,7 @@ class PermissionActivity : AppCompatActivity() {
     }
 
     companion object {
-        val TAG = "PermissionActivity"
+        private const val TAG = "PermissionActivity"
         fun startMe(activity: Activity) {
             activity.startActivity(Intent(activity, PermissionActivity::class.java))
         }
