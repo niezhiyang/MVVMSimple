@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nzy.mvvmsimple">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".lifecycleowner.LifeDemoActivity"></activity>
+        <activity android:name=".lifecycleowner.LifeDemoActivity" />
+        <activity
+            android:name=".livedatabus.BusDemo1Activity"
+            android:theme="@style/Translucent_AppTheme" />
+        <activity android:name=".livedatabus.BusDemo2Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,13 +26,16 @@
         </activity>
         <activity android:name=".user.UserActivity" />
         <activity android:name=".viewmodel.ViewModelDemoActivity" />
-        <activity android:name=".livedatademo.LiveDataActivity" />
+        <activity android:name=".livepermission.PermissionActivity" />
+        <activity
+            android:name=".livedatademo.LiveDataActivity"
+            android:theme="@style/Translucent_AppTheme" />
+
         <provider
             android:name=".lifecycleowner.BooksProvider"
+            android:authorities="com.example.ticker.bookprovider.BooksProvider"
             android:exported="false"
-            android:multiprocess="true"
-            android:authorities="com.example.ticker.bookprovider.BooksProvider">
-        </provider>
+            android:multiprocess="true"/>
     </application>
 
 </manifest>

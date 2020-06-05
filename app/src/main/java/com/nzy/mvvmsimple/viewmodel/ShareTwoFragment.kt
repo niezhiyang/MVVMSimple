@@ -39,7 +39,6 @@ class ShareTwoFragment : Fragment() {
     }
 
     companion object {
-        @JvmStatic
         fun newInstance() =
             ShareTwoFragment()
     }
