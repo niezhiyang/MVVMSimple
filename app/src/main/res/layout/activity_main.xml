@@ -74,6 +74,16 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bt_bus_simple" />
 
+        <Button
+            android:id="@+id/bt_binding_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="数据绑定"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_permission_simple" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

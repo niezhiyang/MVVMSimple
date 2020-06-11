@@ -105,4 +105,7 @@ dependencies {
 
 
     implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta6'
+
+
+    implementation 'com.google.code.gson:gson:2.8.6'
 }

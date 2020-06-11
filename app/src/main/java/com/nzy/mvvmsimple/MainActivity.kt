@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.nzy.mvvmsimple.databinding.ActivityMainBinding
+import com.nzy.mvvmsimple.databinding.BindingActivity
 import com.nzy.mvvmsimple.lifecycleowner.LifeDemoActivity
 import com.nzy.mvvmsimple.livedatabus.BusDemo1Activity
 import com.nzy.mvvmsimple.livedatademo.LiveDataActivity
@@ -41,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         }
         bt_permission_simple.setOnClickListener {
             PermissionActivity.startMe(this)
+        }
+
+        bt_binding_simple.setOnClickListener {
+            BindingActivity.startMe(this)
         }
 //        val uri: Uri = Uri.parse("content://com.example.ticker.bookprovider.BooksProvider")
 //        contentResolver.query(uri, null, null, null, null)

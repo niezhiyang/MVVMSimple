@@ -27,6 +27,7 @@
         <activity android:name=".user.UserActivity" />
         <activity android:name=".viewmodel.ViewModelDemoActivity" />
         <activity android:name=".livepermission.PermissionActivity" />
+        <activity android:name=".databinding.BindingActivity" />
         <activity
             android:name=".livedatademo.LiveDataActivity"
             android:theme="@style/Translucent_AppTheme" />

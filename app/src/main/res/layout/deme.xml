@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.nzy.mvvmsimple.user.User" />
+        <import
+            alias="User2"
+            type="com.nzy.mvvmsimple.databinding.model.User" />
+
+        <variable
+            name="user1"
+            type="User" />
+
+        <variable
+            name="user2"
+            type="User2" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

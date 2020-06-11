@@ -1,6 +1,5 @@
 package com.nzy.mvvmsimple.lifecycleowner
 
-import android.nfc.Tag
 import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
@@ -45,6 +44,7 @@ class ActivityObserver : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     fun onAny() {
+
     }
 
 }
