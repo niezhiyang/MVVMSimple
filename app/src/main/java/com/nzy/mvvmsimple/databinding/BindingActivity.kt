@@ -55,9 +55,11 @@ class BindingActivity : AppCompatActivity() {
             viewModel.drawable.value = resources.getDrawable(R.drawable.hashiqi_two)
             if(viewModel.padding.value==20){
                 viewModel.padding.value = 50
-
+                viewModel.imageUrl.value = "https://dss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2406161785,701397900&fm=5"
                Log.e("wwww" ,"${tv_padding.paddingTop}")
             }else{
+                viewModel.imageUrl.value = "https://dss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2199312764,1078124651&fm=5"
+
                 viewModel.padding.value = 20
                 Log.e("wwww" ,"${tv_padding.paddingTop}")
             }

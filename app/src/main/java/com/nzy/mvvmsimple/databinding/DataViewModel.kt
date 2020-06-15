@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModel
  */
 class DataViewModel(context: Application) : AndroidViewModel(context) {
     var nameLiveData = MutableLiveData<String>()
+    var imageUrl = MutableLiveData<String>()
     var isBigPadding = MutableLiveData<Boolean>()
     var drawable = MutableLiveData<Drawable>()
     var padding = MutableLiveData<Int>()

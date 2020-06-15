@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 android {
     kotlinOptions {
         jvmTarget = "1.8"
@@ -108,4 +108,7 @@ dependencies {
 
 
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }
