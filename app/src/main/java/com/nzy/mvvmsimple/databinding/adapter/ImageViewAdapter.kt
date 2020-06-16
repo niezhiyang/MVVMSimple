@@ -11,14 +11,21 @@ import com.bumptech.glide.Glide
  */
 
 
-
-
-@BindingAdapter(value = ["imageUrl", "placeholder", "error"], requireAll = false)
-fun setImageUrl(imageView: ImageView, url: String?, placeHolder: Drawable?, error: Drawable?) {
-    if (url == null) {
-        imageView.setImageDrawable(placeHolder);
+@BindingAdapter(value = ["imageUrl", "placeholderRes", "errorRes"], requireAll = false)
+fun setImageUrl(imageView: ImageView, url: String?, placeholderRes: Int?, errorRes: Int?) {
+    if (url == null && placeholderRes != null) {
+        imageView.setImageResource(placeholderRes);
     } else {
-        Glide.with(imageView).load(url).placeholder(placeHolder).error(error).into(imageView)
+        var glide = Glide.with(imageView).load(url);
+        if (placeholderRes != null) {
+            glide = glide.placeholder(placeholderRes)
+        }
+
+        if (errorRes != null) {
+            glide = glide.error(errorRes)
+        }
+
+        glide.into(imageView)
     }
 }
 

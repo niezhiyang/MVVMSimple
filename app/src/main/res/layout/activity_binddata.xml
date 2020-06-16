@@ -13,6 +13,8 @@
             type="com.nzy.mvvmsimple.databinding.model.Cat" />
 
         <import type="android.view.View" />
+        <import type="com.nzy.mvvmsimple.R" />
+        <import type="android.R.drawable" />
 
         <import type="com.nzy.mvvmsimple.databinding.util.StringUtil" />
         <!--        java.lang.*包下的类会自动导入，type不用写全限定名-->
@@ -191,6 +193,7 @@
                 android:text="啦啦啦" />
 
             <ImageView
+                android:src="@drawable/hashiqi_one"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
@@ -203,20 +206,23 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:src="@{viewmodel.drawable}"
+
                 android:text="button3" />
 
 
             <ImageView
+                app:isGone="@{viewmodel.isBigPadding}"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:text="button4"
+                app:errorRes="@{R.drawable.hashiqi_two}"
                 app:imageUrl="@{viewmodel.imageUrl}"
-                app:placeholder="@{@drawable/hashiqi_one}"
-                app:error="@{@drawable/hashiqi_one}"/>
+                app:placeholderRes="@{R.drawable.hashiqi_one}" />
 
         </LinearLayout>
+
         <ImageView
             app:imageUrl="@{viewmodel.imageUrl}"
             android:layout_width="100dp"
@@ -224,6 +230,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
+
         <Button
             android:id="@+id/bt_change"
             android:layout_width="wrap_content"
