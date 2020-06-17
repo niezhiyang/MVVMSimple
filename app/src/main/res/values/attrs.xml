@@ -5,5 +5,10 @@
         <attr name="placeholderRes" format="reference|color" />
         <attr name="errorRes" format="reference" />
     </declare-styleable>
+    <declare-styleable name="RecyclerView">
+        <attr name="adapter" format="reference" />
+    </declare-styleable>
+
+
     <attr name="isGone" format="boolean" />
 </resources>

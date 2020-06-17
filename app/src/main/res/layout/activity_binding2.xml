@@ -4,13 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+            <variable
+                name="adapter"
+                type="com.nzy.mvvmsimple.databinding.res.DemoBindAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".databinding.BindingActivity2">
+        tools:context=".databinding.res.BindingActivity2">
 
+        <androidx.recyclerview.widget.RecyclerView
+            app:adapter="@{adapter}"
+            android:id="@+id/rv"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

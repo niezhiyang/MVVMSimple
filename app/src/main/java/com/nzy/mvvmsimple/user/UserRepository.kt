@@ -32,7 +32,6 @@ class UserRepository private constructor() {
     }
 
     companion object {
-        // For Singleton instantiation
         @Volatile
         private var instance: UserRepository? = null
 
