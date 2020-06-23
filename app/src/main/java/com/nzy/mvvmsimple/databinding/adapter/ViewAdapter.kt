@@ -2,7 +2,7 @@ package com.nzy.mvvmsimple.databinding.adapter
 
 import android.view.View
 import androidx.databinding.BindingAdapter
-import com.wemomo.matchmaker.bind.command.BindingCommand
+import com.nzy.mvvmsimple.databinding.command.BindingCommand
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.ObservableEmitter
 import io.reactivex.rxjava3.core.ObservableOnSubscribe

@@ -11,7 +11,7 @@
 
         <variable
             name="command"
-            type="com.wemomo.matchmaker.bind.command.BindingCommand" />
+            type="com.nzy.mvvmsimple.databinding.command.BindingCommand" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

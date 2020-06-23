@@ -1,4 +1,4 @@
-
+package com.nzy.mvvmsimple.databinding.command
 import android.view.View
 
 /**

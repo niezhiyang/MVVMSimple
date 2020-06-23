@@ -14,9 +14,9 @@ import com.nzy.library.utils.showToast
 import com.nzy.mvvmsimple.R
 import com.nzy.mvvmsimple.databinding.ActivityBinding2Binding
 import com.nzy.mvvmsimple.databinding.BindingActivity
+import com.nzy.mvvmsimple.databinding.command.BindingAction
+import com.nzy.mvvmsimple.databinding.command.BindingCommand
 import com.nzy.mvvmsimple.user.User
-import com.wemomo.matchmaker.bind.command.BindingAction
-import com.wemomo.matchmaker.bind.command.BindingCommand
 import kotlinx.android.synthetic.main.activity_binding2.*
 
 class BindingActivity2 : AppCompatActivity() {
