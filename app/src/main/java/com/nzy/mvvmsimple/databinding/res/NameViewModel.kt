@@ -7,5 +7,5 @@ import androidx.lifecycle.ViewModel
  *  since 2020/6/17
  */
 class NameViewModel : ViewModel() {
-
+    var adapter: DemoBindAdapter = DemoBindAdapter()
 }

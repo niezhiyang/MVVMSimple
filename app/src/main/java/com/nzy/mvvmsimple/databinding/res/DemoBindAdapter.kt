@@ -42,7 +42,7 @@ class DemoBindAdapter :
     }
 
     fun itemChildClick(view: View, user: User, position: Int) {
-        Toast.makeText(mContext, "$position--" + user.name, Toast.LENGTH_SHORT).show()
+//        Toast.makeText(mContext, "$position--" + user.name, Toast.LENGTH_SHORT).show()
     }
 
 }

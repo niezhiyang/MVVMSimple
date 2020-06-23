@@ -21,13 +21,13 @@ class UserActivity : AppCompatActivity() {
     //创建ViewModel方式1
 //   private val viewModel: UserViewModel by viewModels()
     //创建ViewModel方式2
-//    private val viewModel:UserViewModel by lazy { ViewModelProvider(this,InjectorUtils.provideUserViewModelFactory()).get(UserViewModel::class.java) }
+    private val viewModel:UserViewModel by lazy { ViewModelProvider(this,InjectorUtils.provideUserViewModelFactory()).get(UserViewModel::class.java) }
 
 
-    private val viewModel: UserViewModel by viewModels {
-        // 通过InjectorUtils类拿到对应的ViewModelFactory，这种方法可以定义构造方法带参的ViewModel
-        InjectorUtils.provideUserViewModelFactory()
-    }
+//    private val viewModel: UserViewModel by viewModels {
+//        // 通过InjectorUtils类拿到对应的ViewModelFactory，这种方法可以定义构造方法带参的ViewModel
+//        InjectorUtils.provideUserViewModelFactory()
+//    }
     private var progressDialog: ProgressDialog? = null
 
 

@@ -2,6 +2,7 @@ package com.nzy.mvvmsimple.lifecycleowner;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.util.Log;
@@ -18,6 +19,7 @@ public  class BooksProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
         Log.e(TAG,"------onCreate");
+       Context context =  getContext();
         return true;
     }
 

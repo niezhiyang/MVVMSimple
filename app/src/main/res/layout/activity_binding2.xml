@@ -4,22 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-            <variable
-                name="adapter"
-                type="com.nzy.mvvmsimple.databinding.res.DemoBindAdapter" />
+
+        <variable
+            name="adapter"
+            type="com.nzy.mvvmsimple.databinding.res.DemoBindAdapter" />
+
+        <variable
+            name="command"
+            type="com.wemomo.matchmaker.bind.command.BindingCommand" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".databinding.res.BindingActivity2">
 
+        <Button
+            app:singleClick="@{command}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"></Button>
         <androidx.recyclerview.widget.RecyclerView
-            app:adapter="@{adapter}"
             android:id="@+id/rv"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:adapter="@{adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

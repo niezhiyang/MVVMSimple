@@ -6,7 +6,7 @@
         <attr name="errorRes" format="reference" />
     </declare-styleable>
     <declare-styleable name="RecyclerView">
-        <attr name="adapter" format="reference" />
+        <attr name="itemClickListener" format="reference" />
     </declare-styleable>
 
 

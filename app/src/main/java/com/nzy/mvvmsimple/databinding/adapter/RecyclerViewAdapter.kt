@@ -10,7 +10,19 @@ import com.chad.library.adapter.base.BaseQuickAdapter
  *  @author niezhiyang
  *  since 2020/6/17
  */
-//@BindingAdapter(value = ["adapter", "itemClick", "loadMore"], requireAll = false)
-//fun setRecyclerView(recyclerView: RecyclerView, adapter: BaseQuickAdapter?) {
-//
-//}
+@BindingAdapter(value = ["itemClickListener", "loadMoreListener"], requireAll = false)
+fun setRecyclerView(
+    recyclerView: RecyclerView,
+    itemClickListener: BaseQuickAdapter.OnItemClickListener?,
+    loadMoreListener: BaseQuickAdapter.RequestLoadMoreListener?
+) {
+
+    var adapter = recyclerView.adapter as BaseQuickAdapter<*, *>
+    if (itemClickListener != null) {
+        adapter.onItemClickListener = itemClickListener
+    }
+
+    if (loadMoreListener != null) {
+        adapter.setOnLoadMoreListener(loadMoreListener, recyclerView)
+    }
+}

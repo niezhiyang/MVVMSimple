@@ -44,6 +44,7 @@ class ViewModelDemoActivity : AppCompatActivity() {
             viewModel.dataLive.value= "Activity触发的改变"
         }
         viewModel.getName()
+        binding.lifecycleOwner =this
     }
     companion object {
         fun startMe(activity: Activity) {

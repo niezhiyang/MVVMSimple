@@ -15,9 +15,16 @@ import com.nzy.mvvmsimple.lifecycleowner.LifeDemoActivity
  *  @author niezhiyang
  *  since 2020/5/28
  */
-class MyApplication : Application() {
+ class MyApplication : Application() {
+
+
+
+    companion object{
+        @JvmStatic lateinit var application: MyApplication
+    }
     override fun onCreate() {
         super.onCreate()
+        application = this
 //        ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationObserver())
 
         registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
