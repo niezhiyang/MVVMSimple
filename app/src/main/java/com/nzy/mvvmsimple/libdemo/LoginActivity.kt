@@ -31,7 +31,7 @@ class LoginActivity : BaseActivity<ActivityLibBinding, LoginViewModel>() {
         }
     }
 
-    override fun setContentViewId(): Int {
+    override fun initLayoutId(): Int {
         return R.layout.activity_lib
     }
 

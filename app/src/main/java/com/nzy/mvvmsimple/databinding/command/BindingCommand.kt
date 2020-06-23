@@ -1,4 +1,3 @@
-package com.wemomo.matchmaker.bind.command
 
 import android.view.View
 
